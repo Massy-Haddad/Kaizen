@@ -1,19 +1,19 @@
-import { StyleSheet, View } from "react-native";
+import { useColorScheme, StyleSheet, View } from "react-native";
+import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 import { Home, FoodDetail, Analytics } from "../screens";
-import { StatusBar } from "expo-status-bar";
 
 const BottomTab = createBottomTabNavigator();
-const HomeStack = createNativeStackNavigator();
 
 export default function RootNavigator() {
+  const isDarkMode = useColorScheme() === "dark";
+
   return (
     <NavigationContainer>
-      <StatusBar translucent />
+      <StatusBar translucent style={isDarkMode ? "light" : "dark"} />
       <BottomTab.Navigator
         initialRouteName="Home"
         screenOptions={{
