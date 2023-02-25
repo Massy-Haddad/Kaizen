@@ -9,21 +9,29 @@ module.exports = {
   ],
   darkMode: "media",
   theme: {
-    textColor: {
-      skin: {
-        base: `rgb(235, 238, 240)`,
-        muted: `rgb(199, 210, 254)`,
-        inverted: `rgb(79, 70, 229)`,
+    extend: {
+      textColor: {
+        skin: {
+          base: `rgb(17, 24, 2)`,
+          muted: `rgb(47, 67, 6)`,
+          inverted: `rgb(235, 250, 204)`,
+        },
       },
-    },
-    backgroundColor: {
-      skin: {
-        fill: `rgb(185, 28, 28)`,
+      backgroundColor: {
+        skin: {
+          fill: `rgb(179, 255, 23)`,
+        },
       },
-    },
-    gradientColorStops: {
-      skin: {
-        hue: `rgb(185, 28, 28)`,
+      borderColor: {
+        skin: {
+          base: `rgb(179, 255, 23)`,
+          inverted: `rgb(235, 250, 204)`,
+        }
+      },
+      gradientColorStops: {
+        skin: {
+          hue: `rgb(179, 255, 23)`,
+        },
       },
     },
   },

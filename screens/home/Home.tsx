@@ -1,17 +1,24 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { ScrollView, Text, View } from "react-native";
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Avatar, DateSlider } from "../../components";
 
 const Home = () => {
-  const backgroundStyle = "bg-black dark:bg-black";
-
   return (
-    <SafeAreaView className="bg-white flex-1 items-center justify-center py-24 px-6 sm:py-32 lg:px-8">
-      <Text className="text-gray-900 m-4 text-3xl font-bold tracking-tight">
-        Kaizen
-      </Text>
-      <Text className="text-indigo-600 text-base font-semibold">Home</Text>
+    <SafeAreaView className="flex-1 bg-skin-fill">
+      <View className="flex-row items-center justify-between p-4">
+        <View>
+          <Text className="text-xl font-bold tracking-tight text-skin-base">
+            Massy
+          </Text>
+          <Text className="text-xs font-semibold leading-6 text-skin-muted">
+            Welcome back !
+          </Text>
+        </View>
+
+        <Avatar />
+      </View>
+      <DateSlider />
     </SafeAreaView>
   );
 };

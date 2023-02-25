@@ -1,5 +1,5 @@
 import { useColorScheme, StyleSheet, View } from "react-native";
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -26,10 +26,15 @@ export default function RootNavigator() {
           name="Home"
           component={Home}
           options={{
-            headerShown:false,
+            headerShown: false,
             tabBarIcon: ({ focused }) => (
-              <View style={{ alignItems: "center", justifyContent: "center" }}>
-                <Ionicons name="home-outline" size={32} />
+              <View className="items-center justify-center">
+                <Ionicons
+                  // name={focused ? "home" : "home-outline"}
+                  name="home-outline"
+                  size={32}
+                  color={focused ? "#111802" : "#2F4306"}
+                />
               </View>
             ),
           }}
@@ -39,8 +44,13 @@ export default function RootNavigator() {
           component={Analytics}
           options={{
             tabBarIcon: ({ focused }) => (
-              <View style={{ alignItems: "center", justifyContent: "center" }}>
-                <Ionicons name="analytics-outline" size={32} />
+              <View className="items-center justify-center">
+                <Ionicons
+                  // name={focused ? "analytics" : "analytics-outline"}
+                  name="analytics-outline"
+                  size={32}
+                  color={focused ? "#111802" : "#2F4306"}
+                />
               </View>
             ),
           }}
